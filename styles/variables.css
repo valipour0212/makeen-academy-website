@@ -1,0 +1,24 @@
+:root {
+    /* Brand Colors */
+    --color-primary: #092C4C;
+    --color-secondary: #F2994A;
+
+    /* State Colors */
+    --color-info: #36A8D9;
+    --color-success: #2ECC71;
+    --color-warning: #FFEB3B;
+    --color-error: #FA2523;
+
+    /* Black & White */
+    --color-black-1: #000000;
+    --color-black-2: #1D1D1D;
+    --color-black-3: #282828;
+    --color-white: #FFFFFF;
+
+    /* Grey Scale */
+    --color-gray-1: #666666;
+    --color-gray-2: #777777;
+    --color-gray-3: #9E9E9E;
+    --color-gray-4: #BDBDBD;
+    --color-gray-5: #E0E0E0;
+}
