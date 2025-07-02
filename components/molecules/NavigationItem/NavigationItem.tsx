@@ -19,7 +19,7 @@ function NavigationItem({icon, label, href, isActive}: NavigationItemProps) {
     return (
         <button
             onClick={() => router.push(href)}
-            className="flex flex-col items-center justify-center gap-1 focus:outline-none"
+            className="flex flex-col items-center justify-center gap-1 focus:outline-none cursor-pointer"
         >
             <Icon src={icon} alt={label} isActive={isActive}/>
             <Label text={label} isActive={isActive}/>

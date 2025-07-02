@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -6,11 +5,11 @@ import NavigationItem from '@/components/molecules/NavigationItem/NavigationItem
 import {usePathname} from 'next/navigation';
 
 const NAV_ITEMS = [
-    {label: 'خانه', icon: '/navigation/home.svg', href: '/'},
-    {label: 'دوره ها', icon: '/navigation/courses.svg', href: '/courses'},
-    {label: 'گالری تصاویر', icon: '/navigation/gallery.svg', href: '/gallery'},
-    {label: 'مکینی ها', icon: '/navigation/people.svg', href: '/makeeniha'},
-    {label: 'بیشتر', icon: '/navigation/more.svg', href: '/more'},
+    {label: 'خانه', icon: '/icons/navigation/home.svg', href: '/'},
+    {label: 'دوره ها', icon: '/icons/navigation/courses.svg', href: '/courses'},
+    {label: 'گالری تصاویر', icon: '/icons/navigation/gallery.svg', href: '/gallery'},
+    {label: 'مکینی ها', icon: '/icons/navigation/people.svg', href: '/makeeniha'},
+    {label: 'بیشتر', icon: '/icons/navigation/more.svg', href: '/more'},
 ];
 
 function NavigationBar() {
@@ -18,7 +17,7 @@ function NavigationBar() {
 
     return (
         <nav
-            className="fixed bottom-0 left-0 right-0 z-50 flex justify-around bg-white border-t border-gray-200 h-[74px] shadow-md">
+            className="fixed bottom-0 left-0 right-0 z-50 flex justify-between bg-white border-t border-gray-200 rounded-t-2xl h-[74px] shadow-md py-3 px-6">
             {
                 NAV_ITEMS.map(item => <NavigationItem
                         key={item.href}
