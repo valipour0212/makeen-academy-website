@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import 'swiper/css';
+@import 'swiper/css/pagination';
 
 /* Shabnam Font */
 @font-face {
@@ -25,3 +27,4 @@
 body {
     font-family: 'Shabnam', sans-serif;
 }
+
