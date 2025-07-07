@@ -4,6 +4,7 @@ import Image from "next/image";
 import CoursesContainerList from "@/components/templates/CoursesContainerList/CoursesContainerList";
 import FeaturesList from "@/components/templates/FeaturesList/FeaturesList";
 import LastVideosList from "@/components/templates/LastVideosList/LastVideosList";
+import Description from "@/components/templates/Description/Description";
 
 function HomePage() {
     return (
@@ -18,7 +19,8 @@ function HomePage() {
 
             {/*<CoursesContainerList/>*/}
             {/*<FeaturesList/>*/}
-            <LastVideosList/>
+            {/*<LastVideosList/>*/}
+            <Description/>
         </div>
     );
 }

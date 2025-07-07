@@ -19,7 +19,7 @@ const variantClasses = {
 const sizeClasses = {
     sm: 'px-3 py-1 text-sm',
     md: 'w-[120px] h-[35px] px-4 py-1 gap-2 font-semibold text-lg',
-    lg: 'px-6 py-3 text-lg',
+    lg: 'w-[205px] h-[45px] px-4 py-2 font-semibold text-[16px]',
 };
 
 function Button({
@@ -32,7 +32,7 @@ function Button({
     return (
         <button
             className={cn(
-                "rounded-full cursor-pointer",
+                "rounded-full cursor-pointer ",
                 variantClasses[variant],
                 sizeClasses[size],
             )}
