@@ -6,6 +6,7 @@ import FeaturesList from "@/components/templates/FeaturesList/FeaturesList";
 import LastVideosList from "@/components/templates/LastVideosList/LastVideosList";
 import Description from "@/components/templates/Description/Description";
 import MakeenihaList from "@/components/templates/MakeenihaList/MakeenihaList";
+import MentorsList from "@/components/templates/MentorsList/MentorsList";
 
 function HomePage() {
     return (
@@ -22,7 +23,8 @@ function HomePage() {
             {/*<FeaturesList/>*/}
             {/*<LastVideosList/>*/}
             {/*<Description/>*/}
-            <MakeenihaList/>
+            {/*<MakeenihaList/>*/}
+            <MentorsList/>
         </div>
     );
 }
