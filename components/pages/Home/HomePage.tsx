@@ -1,8 +1,8 @@
 "use client";
 import React from 'react';
 import Image from "next/image";
+import BlogList from "@/components/templates/BlogList/BlogList";
 
-import Gallery from "@/components/templates/Gallery/Gallery";
 
 function HomePage() {
     return (
@@ -22,7 +22,8 @@ function HomePage() {
             {/*<MakeenihaList/>*/}
             {/*<MentorsList/>*/}
             {/*<Cowork/>*/}
-            <Gallery/>
+            {/*<Gallery/>*/}
+            <BlogList/>
         </div>
     );
 }
