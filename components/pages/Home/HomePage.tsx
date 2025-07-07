@@ -7,6 +7,7 @@ import LastVideosList from "@/components/templates/LastVideosList/LastVideosList
 import Description from "@/components/templates/Description/Description";
 import MakeenihaList from "@/components/templates/MakeenihaList/MakeenihaList";
 import MentorsList from "@/components/templates/MentorsList/MentorsList";
+import Cowork from "@/components/templates/Cowork/Cowork";
 
 function HomePage() {
     return (
@@ -24,7 +25,8 @@ function HomePage() {
             {/*<LastVideosList/>*/}
             {/*<Description/>*/}
             {/*<MakeenihaList/>*/}
-            <MentorsList/>
+            {/*<MentorsList/>*/}
+            <Cowork/>
         </div>
     );
 }
