@@ -1,13 +1,8 @@
 "use client";
 import React from 'react';
 import Image from "next/image";
-import CoursesContainerList from "@/components/templates/CoursesContainerList/CoursesContainerList";
-import FeaturesList from "@/components/templates/FeaturesList/FeaturesList";
-import LastVideosList from "@/components/templates/LastVideosList/LastVideosList";
-import Description from "@/components/templates/Description/Description";
-import MakeenihaList from "@/components/templates/MakeenihaList/MakeenihaList";
-import MentorsList from "@/components/templates/MentorsList/MentorsList";
-import Cowork from "@/components/templates/Cowork/Cowork";
+
+import Gallery from "@/components/templates/Gallery/Gallery";
 
 function HomePage() {
     return (
@@ -26,7 +21,8 @@ function HomePage() {
             {/*<Description/>*/}
             {/*<MakeenihaList/>*/}
             {/*<MentorsList/>*/}
-            <Cowork/>
+            {/*<Cowork/>*/}
+            <Gallery/>
         </div>
     );
 }
