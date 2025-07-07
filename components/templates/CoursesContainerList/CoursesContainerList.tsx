@@ -1,6 +1,3 @@
-"use client";
-
-import {SwiperSlide} from "swiper/react";
 import CoursesContainerCard from "@/components/organisms/CoursesContainerCard/CoursesContainerCard";
 
 const coursesData = [
@@ -48,17 +45,17 @@ const coursesData = [
 
 function CoursesContainerList() {
     return (
-        <div className="mx-4 my-10">
+        <div className="my-5">
             {
-                coursesData.map(course => <SwiperSlide key={course.id}>
-                    <CoursesContainerCard
+                coursesData.map(course => <CoursesContainerCard
+                        key={course.id}
                         targetDate={course.targetDate}
                         title={course.title}
                         description={course.description}
                         status={course.status}
                         image={course.image}
                     />
-                </SwiperSlide>)
+                )
             }
         </div>
     );

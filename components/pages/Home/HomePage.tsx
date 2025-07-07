@@ -2,19 +2,21 @@
 import React from 'react';
 import Image from "next/image";
 import CoursesContainerList from "@/components/templates/CoursesContainerList/CoursesContainerList";
+import FeaturesList from "@/components/templates/FeaturesList/FeaturesList";
 
 function HomePage() {
     return (
-        <div>
+        <div className="flex flex-col">
             <Image
                 src={"/home/banner.png"}
                 alt={"banner"}
                 width={358}
                 height={177}
-                className="rounded-lg px-4 py-6 w-full h-fit"
+                className="rounded-lg py-6 w-full h-fit"
             />
 
-            <CoursesContainerList/>
+            {/*<CoursesContainerList/>*/}
+            <FeaturesList/>
         </div>
     );
 }
