@@ -3,6 +3,7 @@ import React from 'react';
 import Image from "next/image";
 import CoursesContainerList from "@/components/templates/CoursesContainerList/CoursesContainerList";
 import FeaturesList from "@/components/templates/FeaturesList/FeaturesList";
+import LastVideosList from "@/components/templates/LastVideosList/LastVideosList";
 
 function HomePage() {
     return (
@@ -16,7 +17,8 @@ function HomePage() {
             />
 
             {/*<CoursesContainerList/>*/}
-            <FeaturesList/>
+            {/*<FeaturesList/>*/}
+            <LastVideosList/>
         </div>
     );
 }
