@@ -1,8 +1,7 @@
 "use client";
 import React from 'react';
 import Image from "next/image";
-import StudentCompanies from "@/components/templates/StudentCompanies/StudentCompanies";
-
+import Newsletter from "@/components/templates/Newsletter/Newsletter";
 
 function HomePage() {
     return (
@@ -24,7 +23,8 @@ function HomePage() {
             {/*<Cowork/>*/}
             {/*<Gallery/>*/}
             {/*<BlogList/>*/}
-            <StudentCompanies/>
+            {/*<StudentCompanies/>*/}
+            <Newsletter/>
         </div>
     );
 }
