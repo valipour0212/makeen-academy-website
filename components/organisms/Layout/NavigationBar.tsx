@@ -1,33 +1,34 @@
 'use client';
 
-import React from 'react';
-import NavigationItem from '@/components/molecules/NavigationItem';
+import React, {JSX, useState} from 'react';
 import {usePathname} from 'next/navigation';
+import NAVIGATION_BAR from "@/data/navigationBar";
+import {MoreModal, NavigationItem} from "@/components/molecules";
 
-const NAV_ITEMS = [
-    {label: 'خانه', icon: '/icons/navigation/home.svg', href: '/'},
-    {label: 'دوره ها', icon: '/icons/navigation/courses.svg', href: '/courses'},
-    {label: 'گالری تصاویر', icon: '/icons/navigation/gallery.svg', href: '/gallery'},
-    {label: 'مکینی ها', icon: '/icons/navigation/people.svg', href: '/makeeniha'},
-    {label: 'بیشتر', icon: '/icons/navigation/more.svg', href: '/more'},
-];
-
-function NavigationBar() {
+function NavigationBar(): JSX.Element {
     const pathname = usePathname();
+    const [showMoreModal, setShowMoreModal] = useState(false);
+
+    function handleItemClick(href: string) {
+        if (href === "/more") return setShowMoreModal(prev => !prev);
+    }
 
     return (
         <nav
             className="fixed bottom-0 left-0 right-0 z-50 flex justify-between bg-white border-t border-gray-200 rounded-t-2xl h-[74px] shadow-md py-3 px-6 md:hidden">
             {
-                NAV_ITEMS.map(item => <NavigationItem
+                NAVIGATION_BAR.map(item => <NavigationItem
                         key={item.href}
                         label={item.label}
                         icon={item.icon}
+                        activeIcon={item.activeIcon}
                         href={item.href}
                         isActive={pathname === item.href}
+                        onClick={handleItemClick}
                     />
                 )
             }
+            {showMoreModal && <MoreModal onClose={() => setShowMoreModal(false)} />}
         </nav>
     );
 }

@@ -1,4 +1,17 @@
-// types.ts
+export interface NavigationBarItem {
+    label: string;
+    icon: string;
+    activeIcon: string;
+    href: string;
+}
+
+export interface MoreModalItem {
+    label: string;
+    icon: string;
+    activeIcon: string;
+    href: string;
+}
+
 export interface Course {
     id: string;
     slug: string;
