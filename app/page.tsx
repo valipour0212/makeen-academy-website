@@ -1,8 +1,8 @@
-import HomePage from "@/components/pages/Home/HomePage";
+import HomePage from "@/components/pages/HomePage";
 
 function Home() {
     return (
-        <main className="w-full h-full bg-[#F8F8F8] py-[74px] px-4">
+        <main className="w-full md:max-w-[1440px] h-full py-[74px] px-4 md:mx-auto">
             <HomePage />
         </main>
     );

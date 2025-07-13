@@ -1,7 +1,7 @@
 import type {Metadata} from "next";
 import "./globals.css";
-import NavigationBar from "@/components/organisms/NavigationBar/NavigationBar";
-import Header from "@/components/organisms/Header/Header";
+import NavigationBar from "@/components/organisms/Layout/NavigationBar";
+import Header from "@/components/organisms/Layout/Header";
 
 export const metadata: Metadata = {
     title: "آکادمی مکین",

@@ -25,7 +25,7 @@ const statusMap = {
 function StatusBadge({status}: StatusBadgeProps): JSX.Element {
     const {text, bg, textColor} = statusMap[status];
     return (
-        <div className={`p-2 gap-2 rounded-lg ${bg} font-medium text-xs ${textColor}`}>
+        <div className={`w-fit h-fit p-2 gap-2 rounded-lg ${bg} font-medium text-xs md:text-[16px] ${textColor}`}>
             {text}
         </div>
     );

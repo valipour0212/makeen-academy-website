@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from "next/image";
+import Button from "@/components/atoms/Button";
 
-function Gallery() {
+function GallerySection() {
     const galleryData = [
         {
             id: "1",
@@ -45,22 +46,24 @@ function Gallery() {
         },
 
     ]
-
-
     return (
-        <main className="w-full md:max-w-[1440px] h-full mx-auto py-[75px] mt-6 px-4 md:px-0 grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-6">
-            {
-                galleryData.map(item => <Image
-                    key={item.id}
-                    src={item.image}
-                    alt={item.image}
-                    width={500}
-                    height={500}
-                    className="rounded-lg object-cover"/>
-                )
-            }
-        </main>
+        <section className="my-5 md:my-12 flex flex-col items-center">
+            <h2 className="font-medium md:font-semibold text-[20px] md:text-[28px]">گالری تصاویر</h2>
+            <div className=" grid grid-cols-2 md:grid-cols-6 gap-4 my-4">
+                {
+                    galleryData.map(item => <Image
+                        key={item.id}
+                        src={item.image}
+                        alt={item.image}
+                        width={500}
+                        height={500}
+                        className="rounded-lg min-w-fit min-h-fit"/>
+                    )
+                }
+            </div>
+            <Button variant="outline" size="lg">مشاهده همه تصاویر</Button>
+        </section>
     );
 }
 
-export default Gallery;
+export default GallerySection;

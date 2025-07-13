@@ -1,19 +1,22 @@
-import {ButtonHTMLAttributes} from "react";
+import React, {ButtonHTMLAttributes} from "react";
 import cn from "@/lib/utils/cn";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode;
     variant?: ButtonVariants;
     size?: ButtonSize;
+    className?: string;
     isLoading?: boolean;
 }
 
-type ButtonVariants = "primary" | "secondary";
+type ButtonVariants = "primary" | "secondary" | "primaryOutline" | "outline";
 type ButtonSize = "sm" | "md" | "lg";
 
 const variantClasses = {
     primary: 'bg-[#F28C28] text-white',
-    secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-300',
+    secondary: 'bg-[#36A8D9] text-white',
+    primaryOutline: 'border border-[#F28C28] text-[#F28C28] font-medium text-lg min-w-[225px] min-h-[37px]',
+    outline: 'bg-white border border-[#36A8D9] text-[#36A8D9]',
 };
 
 const sizeClasses = {
@@ -27,12 +30,14 @@ function Button({
                     variant = "primary",
                     size = "sm",
                     isLoading = false,
+                    className,
                     ...props
                 }: ButtonProps) {
     return (
         <button
             className={cn(
-                "rounded-full cursor-pointer ",
+                "rounded-full cursor-pointer",
+                className,
                 variantClasses[variant],
                 sizeClasses[size],
             )}

@@ -16,48 +16,56 @@ This set of fonts are used in this project under the license: (.....)
     font-weight: 100;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Kalameh';
     src: url('/fonts/Kalameh/KalamehWeb-ExtraLight.woff2') format('woff2');
     font-weight: 200;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Kalameh';
     src: url('/fonts/Kalameh/KalamehWeb-Light.woff2') format('woff2');
     font-weight: 300;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Kalameh';
     src: url('/fonts/Kalameh/KalamehWeb-Regular.woff2') format('woff2');
     font-weight: 400;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Kalameh';
     src: url('/fonts/Kalameh/KalamehWeb-Medium.woff2') format('woff2');
     font-weight: 500;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Kalameh';
     src: url('/fonts/Kalameh/KalamehWeb-SemiBold.woff2') format('woff2');
     font-weight: 600;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Kalameh';
     src: url('/fonts/Kalameh/KalamehWeb-Bold.woff2') format('woff2');
     font-weight: 700;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Kalameh';
     src: url('/fonts/Kalameh/KalamehWeb-ExtraBold.woff2') format('woff2');
     font-weight: 800;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Kalameh';
     src: url('/fonts/Kalameh/KalamehWeb-Black.woff2') format('woff2');
@@ -65,40 +73,67 @@ This set of fonts are used in this project under the license: (.....)
     font-display: swap;
 }
 
-
-/* Shabnam Font */
-/*
-@font-face {
-    font-family: 'Shabnam';
-    src: url('/fonts/Shabnam-FD.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Shabnam';
-    src: url('/fonts/Shabnam-Bold-FD.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Shabnam';
-    src: url('/fonts/Shabnam-Light-FD.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-}
-*/
-
-
 body {
-    font-family: 'Kalameh', 'Shabnam',sans-serif;
+    font-family: 'Kalameh', 'Shabnam', sans-serif;
 }
 
-.gradient-mask {
-    background: linear-gradient(to bottom,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 25%,
-    rgba(255, 255, 255, 0) 75%,
-    rgba(255, 255, 255, 1) 100%
-    );
+.hide-scroll-x {
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
 }
 
+.hide-scroll-x::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.swiper-slide-content {
+    transform: scale(0.85);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.swiper-slide-active .swiper-slide-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* انیمیشن حرکت به چپ */
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* انیمیشن حرکت به راست */
+@keyframes scrollRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(50%);
+    }
+}
+
+/* کلاس انیمیشن برای ردیف پایین (حرکت به چپ) */
+.animate-scrollLeft {
+    animation: scrollLeft 30s linear infinite;
+}
+
+/* کلاس انیمیشن برای ردیف بالا (حرکت به راست) */
+.animate-scrollRight {
+    animation: scrollRight 30s linear infinite;
+}
+
+/* حذف scrollbar افقی */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

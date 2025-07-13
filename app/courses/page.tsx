@@ -1,8 +1,11 @@
 import React from 'react';
+import CoursesPage from "@/components/pages/CoursesPage";
 
 function Courses() {
     return (
-        <div>Courses</div>
+        <main className="">
+            <CoursesPage/>
+        </main>
     );
 }
 
