@@ -9,7 +9,7 @@ interface MoreModalProps {
 }
 
 
-export default function MoreModal({onClose}: MoreModalProps) {
+function MoreModal({onClose}: MoreModalProps) {
     const router = useRouter();
     const pathname = usePathname();
 
@@ -41,3 +41,5 @@ export default function MoreModal({onClose}: MoreModalProps) {
         </div>
     );
 }
+
+export default MoreModal;
