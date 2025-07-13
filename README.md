@@ -23,7 +23,7 @@ This project is built following **Atomic Design**, **Component-Based Architectur
 
 ### 🔐 Admin Panel
 - Dashboard with analytics overview
-- User management (CRUD)
+- User management
 - Section and course management
 - Image gallery management
 - Article/blog management
