@@ -98,42 +98,6 @@ body {
     opacity: 1;
 }
 
-/* انیمیشن حرکت به چپ */
-@keyframes scrollLeft {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-/* انیمیشن حرکت به راست */
-@keyframes scrollRight {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(50%);
-    }
-}
-
-/* کلاس انیمیشن برای ردیف پایین (حرکت به چپ) */
-.animate-scrollLeft {
-    animation: scrollLeft 30s linear infinite;
-}
-
-/* کلاس انیمیشن برای ردیف بالا (حرکت به راست) */
-.animate-scrollRight {
-    animation: scrollRight 30s linear infinite;
-}
-
-/* حذف scrollbar افقی */
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-}
-
-.no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+.shadow {
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.15);
 }

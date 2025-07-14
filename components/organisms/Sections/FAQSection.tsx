@@ -1,45 +1,68 @@
-"use client"
+"use client";
 
-import FAQCategory from "@/components/organisms/Lists/FAQCategory";
-import {useState} from "react";
-import AccordionItem from "@/components/molecules/AccordionItem";
+import {JSX, useState} from "react";
+import {FAQ_DATA} from "@/data/faqData";
+import {useIsMobile} from "@/hooks";
+import {FAQCategory} from "@/components/organisms/Lists";
+import {AccordionItem} from "@/components/molecules";
+import Image from "next/image";
 
-const faqData: Record<string, { question: string; answer: string }[]> = {
-    "دوره ها": [
-        {question: "چه دوره‌هایی برگزار می‌شوند؟", answer: "دوره‌های برنامه‌نویسی، طراحی و ..."},
-        {question: "آیا مدرک داده می‌شود؟", answer: "بله، مدرک معتبر ارائه می‌گردد."},
-    ],
-    "تضمین استخدام": [
-        {question: "آیا تضمین واقعی است؟", answer: "بله، با شرکت‌های همکار قرارداد داریم."},
-    ],
-    "شرایط پرداخت": [
-        {question: "امکان پرداخت اقساطی هست؟", answer: "بله، امکان پرداخت در ۳ قسط وجود دارد."},
-    ],
-    "مدت زمان دوره ها": [
-        {question: "مدت زمان دوره‌ها چقدر است؟", answer: "بین ۳ تا ۶ ماه بسته به دوره."},
-    ],
-};
-
-function FAQSection() {
-    const categories: string[] = Object.keys(faqData);
+function FAQSection(): JSX.Element {
+    const categories: string[] = Object.keys(FAQ_DATA);
     const [selected, setSelected] = useState(categories[0]);
+    const [showAll, setShowAll] = useState(false);
+    const isMobile = useIsMobile();
+
+    const selectedFaqs = FAQ_DATA[selected];
+
+    const visibleFaqs = isMobile
+        ? showAll
+            ? selectedFaqs
+            : selectedFaqs.slice(0, 3)
+        : selectedFaqs;
 
     return (
-        <div className="my-5 md:my-12 w-full flex flex-col items-center">
-            <h2 className="hidden md:flex md:font-semibold md:text-[28px]">سوالات متداول</h2>
+        <div className="my-5 md:my-12 w-full flex flex-col items-center relative">
+            <h2 className="hidden md:flex md:font-semibold md:text-[28px]">
+                سوالات متداول
+            </h2>
+
             <FAQCategory
                 categories={categories}
                 selected={selected}
-                onSelect={setSelected}
+                onSelect={(category) => {
+                    setSelected(category);
+                    setShowAll(false);
+                }}
             />
 
-            <div className="flex flex-col gap-2 md:gap-6 md:grid md:grid-cols-2 md:w-full">
+            <div className="flex flex-col gap-2 md:gap-6 md:grid md:grid-cols-2 w-full md:w-full">
                 {
-                    faqData[selected].map((item, index) =>
-                        <AccordionItem key={index} question={item.question} answer={item.answer}/>
+                    visibleFaqs.map((item, index) =>
+                        <AccordionItem
+                            key={index}
+                            question={item.question}
+                            answer={item.answer}
+                        />
                     )
                 }
             </div>
+
+            {
+                isMobile && selectedFaqs.length > 3 &&
+                <button
+                    onClick={() => setShowAll(!showAll)}
+                    className="w-6 h-6 rounded-full bg-[#F28C28] absolute -bottom-3"
+                >
+                    {
+                        showAll
+                            ? <Image src={"/faqs/arrow-down.svg"} alt="arrow-down" width={24} height={24}
+                                     className="p-1 rotate-180"/>
+                            : <Image src={"/faqs/arrow-down.svg"} alt="arrow-down" width={24} height={24}
+                                     className="p-1"/>
+                    }
+                </button>
+            }
         </div>
     );
 }
