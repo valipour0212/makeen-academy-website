@@ -21,3 +21,12 @@ export interface Course {
     targetDate: string;
     image: string;
 }
+
+export interface Mentor {
+    id: number;
+    image: string;
+    fullName: string;
+    subtitle: string;
+    jobTitle: string;
+    description: string;
+}

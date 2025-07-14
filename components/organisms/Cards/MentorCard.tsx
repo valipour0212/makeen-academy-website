@@ -1,24 +1,21 @@
-import React, {JSX} from 'react';
-import Image from "next/image";
+import {JSX} from "react";
 
-interface MentorsCardProps {
-    image: string;
+interface MentorCardProps {
     fullName: string;
     subtitle: string;
     jobTitle: string;
-    description?: string;
+    description: string;
 }
 
-function MentorCard({image, fullName, subtitle, jobTitle, description}: MentorsCardProps): JSX.Element {
+function MentorCard({fullName, subtitle, jobTitle, description}: MentorCardProps): JSX.Element {
     return (
-        <div className="flex flex-col items-start gap-2 min-w-3/4">
-            <Image src={image} alt={image} width={165} height={210} className="rounded-lg"/>
-            <span className="font-semibold text-lg">{fullName}</span>
-            <div className="flex flex-col gap-1">
-                <span className="font-medium text-xs text-[#8E8E93]">{subtitle}</span>
-                <span className="font-medium text-xs text-[#8E8E93]">{jobTitle}</span>
+        <div className="flex flex-col gap-2">
+            <h3 className="font-semibold md:font-bold text-lg md:text-[20px]">{fullName}</h3>
+            <div className="font-medium text-xs md:text-[16px] text-[#797979] flex flex-col gap-1 md:mt-4 md:mb-6">
+                <p className="">{subtitle}</p>
+                <p className="">{jobTitle}</p>
             </div>
-            <p className="font-normal text-[14px]">{description}</p>
+            <p className="font-normal text-sm md:text-[16px] md:pl-20">{description}</p>
         </div>
     );
 }
