@@ -1,87 +1,115 @@
 "use client";
 
-import Image from "next/image";
+import {JSX, useState} from "react";
 import {MENTORS_DATA} from "@/data/mentorsData";
-import {useState} from "react";
-import {ChevronLeft, ChevronRight} from "lucide-react";
+import {MentorImage} from "@/components/atoms";
+import {MentorCard} from "@/components/organisms/Cards";
+import Image from "next/image";
 
-function MentorsCarousel() {
+function getTranslateX(offset: number): number {
+    const base = 100;
+    if (Math.abs(offset) > 2) return offset * (base * 0.6);
+    if (Math.abs(offset) > 1) return offset * (base * 0.8);
+    return offset * base;
+}
+
+function getSizeStyle(activeId: number, mentorId: number): { width: number; height: number } {
+    const diff = Math.abs(activeId - mentorId);
+    switch (diff) {
+        case 0:
+            return {width: 251, height: 317};
+        case 1:
+            return {width: 199, height: 253};
+        case 2:
+            return {width: 156, height: 197};
+        default:
+            return {width: 116, height: 147};
+    }
+}
+
+function MentorsCarousel(): JSX.Element {
     const [activeId, setActiveId] = useState(MENTORS_DATA[0].id);
     const activeMentor = MENTORS_DATA.find((m) => m.id === activeId)!;
 
-    const getSizeClass = (mentorId: number): string => {
-        const diff = Math.abs(activeId - mentorId);
-        switch (diff) {
-            case 0:
-                return "w-[251] h-[317] opacity-100 z-30";
-            case 1:
-                return "w-[199] h-[253] opacity-90 z-20";
-            case 2:
-                return "w-[156] h-[197] opacity-90 z-10";
-            default:
-                return "w-[116] h-[147] opacity-90 z-0";
-        }
-    };
-
-    const goToNext = () => {
+    function goToNext(): void {
         const currentIndex = MENTORS_DATA.findIndex((m) => m.id === activeId);
         const nextIndex = (currentIndex + 1) % MENTORS_DATA.length;
         setActiveId(MENTORS_DATA[nextIndex].id);
-    };
+    }
 
-    const goToPrev = () => {
+    function goToPrev(): void {
         const currentIndex = MENTORS_DATA.findIndex((m) => m.id === activeId);
         const prevIndex = (currentIndex - 1 + MENTORS_DATA.length) % MENTORS_DATA.length;
         setActiveId(MENTORS_DATA[prevIndex].id);
-    };
+    }
 
     return (
         <div className="w-full flex flex-col items-center py-8">
             <h2 className="text-xl md:text-3xl font-bold mb-8">منتورهای مکین</h2>
 
-            <div className="w-full flex justify-between ">
-                {/* تصویرها */}
-                <div className="hidden md:flex items-center md:max-w-1/3">
+            <div className="w-full flex flex-col md:flex-row justify-between items-center px-4 md:px-20">
+
+                {/* تصاویر - مشترک موبایل و دسکتاپ */}
+                <div
+                    className="relative flex flex-col md:flex-row items-center justify-center w-full h-[350px] overflow-hidden">
                     {
-                        MENTORS_DATA.map((mentor) =>
-                            <Image
-                                key={mentor.id}
-                                src={mentor.image}
-                                alt={mentor.fullName}
-                                width={112}
-                                height={112}
-                                onClick={() => setActiveId(mentor.id)}
-                                className={`rounded-xl cursor-pointer transition-all duration-300 ease-in-out shadow-sm
-                                ${getSizeClass(mentor.id)}`}
-                            />
+                        MENTORS_DATA.map(mentor => {
+                                const isActive = mentor.id === activeId;
+                                const index = MENTORS_DATA.findIndex((m) => m.id === mentor.id);
+                                const activeIndex = MENTORS_DATA.findIndex((m) => m.id === activeId);
+                                const offset = index - activeIndex;
+                                const size = getSizeStyle(activeId, mentor.id);
+
+                                return (
+                                    <MentorImage
+                                        key={mentor.id}
+                                        src={mentor.image}
+                                        alt={mentor.fullName}
+                                        width={size.width}
+                                        height={size.height}
+                                        onClick={() => setActiveId(mentor.id)}
+                                        className="absolute"
+                                        style={{
+                                            transform: `translateX(${getTranslateX(offset)}px) scale(${1 - Math.min(Math.abs(offset) * 0.1, 0.4)})`,
+                                            zIndex: 10 - Math.abs(offset),
+                                            opacity: isActive ? 1 : 0.6,
+                                        }}
+                                    />
+                                );
+                            }
                         )
                     }
                 </div>
 
-                {/* کارت فعال */}
-                <div className="flex flex-col justify-evenly items-start pr-20 w-1/2">
-                    <h3 className="text-lg font-bold mt-4">{activeMentor.fullName}</h3>
-                    <p className="text-sm text-gray-500">{activeMentor.subtitle}</p>
-                    <p className="text-sm font-medium">{activeMentor.jobTitle}</p>
-                    <p className="text-xs text-gray-600 mt-2 leading-relaxed">
-                        {activeMentor.description}
-                    </p>
+                {/* اطلاعات - فقط دسکتاپ */}
+                <div className="hidden md:flex flex-col items-start">
+                    <MentorCard
+                        fullName={activeMentor.fullName}
+                        subtitle={activeMentor.subtitle}
+                        jobTitle={activeMentor.jobTitle}
+                        description={activeMentor.description}
+                    />
 
-
-                    {/* فلش‌ها */}
-                    <div className="flex gap-6 mt-6">
+                    <div className="flex gap-3 mt-9">
                         <button onClick={goToPrev} className="p-2 rounded-full bg-gray-100 hover:bg-gray-200">
-                            <ChevronLeft className="w-5 h-5 rtl:rotate-180"/>
+                            <Image src="/Mentors/arrow-right.svg" alt="arrow-left" width={24} height={24} className=""/>
                         </button>
-
                         <button onClick={goToNext} className="p-2 rounded-full bg-gray-100 hover:bg-gray-200">
-                            <ChevronRight className="w-5 h-5 rtl:rotate-180"/>
+                            <Image src="/Mentors/arrow-left.svg" alt="arrow-left" width={24} height={24} className=""/>
                         </button>
                     </div>
                 </div>
-
             </div>
 
+            {/* اطلاعات - فقط موبایل */}
+            <div className="md:hidden">
+                <MentorCard
+                    fullName={activeMentor.fullName}
+                    subtitle={activeMentor.subtitle}
+                    jobTitle={activeMentor.jobTitle}
+                    description={activeMentor.description}
+                />
+            </div>
         </div>
     );
 }
