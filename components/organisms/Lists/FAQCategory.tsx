@@ -17,7 +17,7 @@ function FAQCategory({categories, selected, onSelect}: FAQCategoryProps): JSX.El
                             <button
                                 key={category}
                                 onClick={() => onSelect(category)}
-                                className={`cursor-pointer text-nowrap md:font-medium text-sm md:text-lg ${isActive
+                                className={`cursor-pointer text-nowrap font-medium text-sm md:text-lg ${isActive
                                     ? "bg-[#36A8D9] text-white p-4 rounded-full"
                                     : ""
                                 }`}
