@@ -15,7 +15,7 @@ const banners = [
 
 function BannerSlider(): JSX.Element {
     return (
-        <div className="w-full md:w-3/4 h-[177px] md:h-[501px] rounded-2xl overflow-hidden">
+        <div className="w-full md:w-4/5 h-[177px] md:h-[501px] rounded-2xl overflow-hidden">
             <Swiper
                 direction="vertical"
                 modules={[Pagination, Autoplay]}

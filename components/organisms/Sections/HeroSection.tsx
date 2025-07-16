@@ -1,6 +1,5 @@
-import React from 'react';
-import BannerSlider from "@/components/organisms/Banners/BannerSlider";
-import CoursesSlider from "@/components/organisms/Lists/CoursesSlider";
+import {BannerSlider} from "@/components/organisms/Banners";
+import {CoursesSlider} from "@/components/organisms/Lists";
 
 function HeroSection() {
     return (
