@@ -13,7 +13,7 @@ interface LastVideosListProps {
 
 function VideoCard({image, title, visit, uploaded}: LastVideosListProps): JSX.Element {
     return (
-        <div className="flex flex-col bg-white rounded-lg shadow-md gap-2 p-2 mb-4 w-[205px] md:w-[335px] h-[190px] md:h-[290px]">
+        <div className="flex flex-col bg-white rounded-lg shadow gap-2 p-2 my-3 w-[205px] md:w-[335px] h-fit md:h-fit">
             <div className="w-[187px] md:w-full h-[98px] md:h-[180px] cursor-pointer">
                 <Image src={image} alt={image} width={500} height={500} className="object-cover "/>
             </div>
