@@ -1,3 +1,5 @@
+"use client"
+
 import React, {useState} from 'react';
 import {usePathname, useRouter} from "next/navigation";
 import {BOTTOM_NAV_ITEMS} from "@/data/navigation";

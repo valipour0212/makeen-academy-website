@@ -1,5 +1,5 @@
 import {LayoutType} from "@/types/layout";
-import {BottomNavigationBar, Header} from "@/layout";
+import {BottomNavigationBar, Footer, Header} from "@/layout";
 
 function SiteLayout({children}: LayoutType) {
     return (
@@ -9,6 +9,7 @@ function SiteLayout({children}: LayoutType) {
                 {children}
             </main>
             <BottomNavigationBar/>
+            <Footer/>
         </>
     );
 }
