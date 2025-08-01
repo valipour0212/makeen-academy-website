@@ -5,7 +5,7 @@ import {usePathname, useRouter} from "next/navigation";
 import {BOTTOM_NAV_ITEMS} from "@/data/navigation";
 import {ButtonNavItemType} from "@/types/navigation";
 import BottomNavItem from "../components/molecules/BottomNavItem";
-import {BottomNavMoreModal} from "@/components/organisms";
+import {BottomNavMoreModal} from "@/components/organisms/Navigation";
 
 function BottomNavigationBar() {
     const pathName: string = usePathname();

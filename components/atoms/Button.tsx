@@ -1,8 +1,6 @@
-import {JSX} from "react";
-import {ButtonType} from "@/types/button";
 import {cn} from "@/lib";
 import {SIZE_STYLE, VARIANTS_STYLE} from "@/constants/button";
-
+import {ButtonType} from "@/types/button";
 
 function Button({
                     children,
@@ -10,7 +8,7 @@ function Button({
                     size = "small",
                     className,
                     isLoading = false
-                }: ButtonType): JSX.Element {
+                }: ButtonType) {
     return (
         <button
             className={cn(
