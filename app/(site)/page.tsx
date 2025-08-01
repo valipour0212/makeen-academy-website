@@ -2,7 +2,7 @@ import {HomePage} from "@/components/pages/site";
 
 function Home() {
     return (
-        <main className="">
+        <main>
             <HomePage/>
         </main>
     );

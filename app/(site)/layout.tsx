@@ -5,7 +5,7 @@ function SiteLayout({children}: LayoutType) {
     return (
         <>
             <Header/>
-            <main>
+            <main className="w-full md:max-w-[1280px] mx-auto px-4 md:px-0 bg-gray-50">
                 {children}
             </main>
             <BottomNavigationBar/>

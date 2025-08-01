@@ -1,6 +1,5 @@
-import React from 'react';
-import {FooterFeatureType} from "@/types/footer";
 import {Icon} from "@/components/atoms";
+import {FooterFeatureType} from "@/types/footer";
 
 function FooterFeatureItem({icon, text}: FooterFeatureType) {
     return (
