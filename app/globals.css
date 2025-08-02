@@ -75,6 +75,7 @@ This set of fonts are used in this project under the license: (.....)
 
 body {
     font-family: 'Kalameh', 'Shabnam', sans-serif;
+    background-color: #f9fafb;
 }
 
 .hide-scroll-x {
