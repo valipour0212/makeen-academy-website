@@ -3,7 +3,7 @@ import {CourseDeadline} from "@/components/organisms/Countdown";
 import Image from "next/image";
 import {FeatureItem} from "@/components/molecules";
 import {Button, StatusBadge} from "@/components/atoms";
-import {CourseType} from "@/types/hero-section";
+import {CourseType} from "@/types/course";
 
 function CourseCardHero({
                             id,

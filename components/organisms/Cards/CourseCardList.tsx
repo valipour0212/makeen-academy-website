@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {FeatureItem} from "@/components/molecules";
 import {StatusBadge} from "@/components/atoms";
-import {CourseType} from "@/types/hero-section";
+import {CourseType} from "@/types/course";
 
 function CourseCardList({id, title, description, status, image, className}: CourseType) {
     return (

@@ -8,6 +8,6 @@ export interface ButtonType {
     isLoading?: boolean;
 }
 
-type Variants = "primary" | "secondary";
+type Variants = "primary" | "secondary" | "primaryOutline" | "secondaryOutline";
 
 type Size = "small" | "medium" | "large";
