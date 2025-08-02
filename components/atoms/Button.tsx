@@ -12,7 +12,7 @@ function Button({
     return (
         <button
             className={cn(
-                "rounded-full cursor-pointer",
+                "rounded-full cursor-pointer ",
                 className,
                 VARIANTS_STYLE[variant],
                 SIZE_STYLE[size],

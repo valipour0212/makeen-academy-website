@@ -1,6 +1,6 @@
 import React from "react";
 import {CourseCardHero, CourseCardList, CourseCardSlide} from "@/components/organisms/Cards/index";
-import {CourseType} from "@/types/hero-section";
+import {CourseType} from "@/types/course";
 
 function CourseCard(course: CourseType) {
     switch (course.variant) {
