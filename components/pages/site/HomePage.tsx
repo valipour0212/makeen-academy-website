@@ -4,6 +4,7 @@ import {FeaturesSection} from "@/sections/FeatureSection";
 import CourseSlideSection from "../../../sections/CourseSlideSection/CourseSlideSection";
 import NewsletterSection from "../../../sections/NewsletterSection/NewsletterSection";
 import CompaniesSection from "../../../sections/CompaniesSection/CompaniesSection";
+import FAQSection from "../../../sections/FAQSection/FAQSection";
 
 function HomePage() {
     return (
@@ -11,6 +12,7 @@ function HomePage() {
             <HeroSection/>
             <FeaturesSection/>
             <CourseSlideSection/>
+            <FAQSection/>
             <CompaniesSection/>
             <NewsletterSection/>
         </main>
