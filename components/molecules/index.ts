@@ -9,4 +9,5 @@ export {default as NewsletterInput} from "./NewsletterInput";
 export {default as GalleryColumn} from "./GalleryColumn";
 export {default as GalleryGrid} from "./GalleryGrid";
 export {default as CoworkingImageGrid} from "./CoworkingImageGrid";
-export {MentorCard} from "./MentorCard";
+export {default as MentorCard} from "./MentorCard";
+export {default as StudentCard} from "./StudentCard";
