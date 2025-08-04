@@ -7,6 +7,7 @@ import CompaniesSection from "../../../sections/CompaniesSection/CompaniesSectio
 import FAQSection from "../../../sections/FAQSection/FAQSection";
 import BlogListSection from "@/sections/BlogListSection/BlogListSection";
 import GallerySection from "../../../sections/GallerySection/GallerySection";
+import CoworkingSection from "../../../sections/CoworkingSection/CoworkingSection";
 
 function HomePage() {
     return (
@@ -14,6 +15,7 @@ function HomePage() {
             <HeroSection/>
             <FeaturesSection/>
             <CourseSlideSection/>
+            <CoworkingSection/>
             <GallerySection/>
             <BlogListSection/>
             <FAQSection/>
