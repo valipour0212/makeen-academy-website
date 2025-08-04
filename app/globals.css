@@ -129,3 +129,21 @@ body {
 .shadow-prime {
     box-shadow: 0 0 7px 0 rgba(242, 140, 40, 1);
 }
+
+@keyframes scrollUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+@keyframes scrollDown {
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0); }
+}
+
+.animate-scroll-up {
+    animation: scrollUp 20s linear infinite;
+}
+
+.animate-scroll-down {
+    animation: scrollDown 20s linear infinite;
+}
