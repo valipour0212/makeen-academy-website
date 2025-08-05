@@ -2,7 +2,8 @@
 
 import React from 'react';
 import {useRouter} from "next/navigation";
-import {Icon, Label} from "@/components/atoms";
+import {Icon} from "@/components/atoms/Icon";
+import {Label} from "@/components/atoms";
 
 interface BottomNavItemProps {
     icon: string;

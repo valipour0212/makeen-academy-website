@@ -11,6 +11,7 @@ import CoworkingSection from "../../../sections/CoworkingSection/CoworkingSectio
 import MentorsSection from "../../../sections/MentorsSection/MentorsSection";
 import StudentsSection from "@/sections/StudentsSection/StudentsSection";
 import AboutSection from "@/sections/AboutSection/AboutSection";
+import VideoSection from "../../../sections/VideoSection/VideoSection";
 
 function HomePage() {
     return (
@@ -18,6 +19,7 @@ function HomePage() {
             <HeroSection/>
             <FeaturesSection/>
             <CourseSlideSection/>
+            <VideoSection/>
             <AboutSection/>
             <StudentsSection/>
             <MentorsSection/>

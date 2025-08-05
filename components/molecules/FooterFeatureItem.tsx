@@ -1,5 +1,5 @@
-import {Icon} from "@/components/atoms";
 import {FooterFeatureType} from "@/types/footer";
+import {Icon} from "@/components/atoms/Icon";
 
 function FooterFeatureItem({icon, text}: FooterFeatureType) {
     return (
