@@ -2,7 +2,7 @@ import {BlogDataType} from "@/types/blog";
 import {BlogImage} from "@/components/atoms/Image";
 import {Heading, Text} from "@/components/atoms/Typography";
 import Link from "next/link";
-import {Icon} from "@/components/atoms";
+import {Icon} from "@/components/atoms/Icon";
 
 function BlogCard({id, image, title, description, uploaded}: BlogDataType) {
     return (

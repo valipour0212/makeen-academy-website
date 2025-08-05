@@ -3,3 +3,4 @@ export {default as CourseCardHero} from "./CourseCardHero";
 export {default as CourseCardList} from "./CourseCardList";
 export {default as CourseCardSlide} from "./CourseCardSlide";
 export {default as FeatureCard} from "./FeatureCard";
+export {default as VideoCard} from "./VideoCard";

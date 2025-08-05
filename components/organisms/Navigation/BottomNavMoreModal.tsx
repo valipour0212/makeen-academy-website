@@ -2,7 +2,8 @@ import React from 'react';
 import {usePathname, useRouter} from "next/navigation";
 import {BUTTON_NAV_MORE_ITEMS} from "@/data/navigation";
 import {ButtonNavItemType} from "@/types/navigation";
-import {Icon, Label} from "@/components/atoms";
+import {Icon} from "@/components/atoms/Icon";
+import {Label} from "@/components/atoms";
 
 interface BottomNavMoreModalProps {
     onClose: () => void;

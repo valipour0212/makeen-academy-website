@@ -1,5 +1,5 @@
 import React, {JSX} from 'react';
-import Icon from "@/components/atoms/Icon";
+import Icon from "@/components/atoms/Icon/Icon";
 import Label from "@/components/atoms/Label";
 
 interface FeatureItemProps {

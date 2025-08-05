@@ -1,5 +1,5 @@
 import {FeatureType} from "@/types/feature";
-import {Icon} from "@/components/atoms";
+import {Icon} from "@/components/atoms/Icon";
 
 
 function FeatureCard({icon, title, description}: FeatureType) {

@@ -1,6 +1,6 @@
 import {SOCIAL_LINKS} from "@/data/footer";
 import Link from "next/link";
-import {Icon} from "@/components/atoms";
+import {Icon} from "@/components/atoms/Icon";
 
 
 function FooterSocialLinks() {
