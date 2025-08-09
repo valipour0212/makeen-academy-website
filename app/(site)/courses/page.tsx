@@ -1,11 +1,11 @@
-import React from 'react';
+import CoursesPage from "@/components/pages/site/CoursesPage";
 
-function CoursesPage() {
+function Courses() {
     return (
-        <h1 className="w-full h-screen flex justify-center items-center">
-            Courses Page
-        </h1>
+        <main>
+            <CoursesPage/>
+        </main>
     );
 }
 
-export default CoursesPage;
+export default Courses;

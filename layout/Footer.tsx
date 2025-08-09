@@ -1,21 +1,19 @@
 "use client"
 
 import React from 'react';
-import {useQuery} from "@tanstack/react-query";
-import getFooter from "@/services/footer";
 import {FooterFeatureItem, FooterSocialLinks} from "@/components/molecules";
 import {FOOTER_FEATURES} from "@/data/footer";
 
 function Footer() {
-    const {data, isLoading, isError} = useQuery({
-        queryKey: ["footer"],
-        queryFn: getFooter,
-    })
-
+    // GET API
+    // const {data, isLoading, isError} = useQuery({
+    //     queryKey: ["footer"],
+    //     queryFn: getFooter,
+    // })
     //
-    if (isLoading) return <p className="text-center my-4">در حال بارگذاری...</p>
-    if (isError || !data) return <p className="text-center my-4 text-red-500">خطا در دریافت اطلاعات</p>
-
+    // //
+    // if (isLoading) return <p className="text-center my-4">در حال بارگذاری...</p>
+    // if (isError || !data) return <p className="text-center my-4 text-red-500">خطا در دریافت اطلاعات</p>
     //
 
     return (

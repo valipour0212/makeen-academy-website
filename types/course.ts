@@ -10,3 +10,22 @@ export interface CourseType {
     variant?: CourseVariant;
     className?: string;
 }
+
+export interface CourseFeature {
+    id: string;
+    icon: string;
+    title: string;
+    description: string;
+}
+
+export interface CourseStep {
+    step: string;
+    title: string;
+    description: string;
+}
+
+export interface CourseFaqs {
+    id: string;
+    question: string;
+    answer: string;
+}
