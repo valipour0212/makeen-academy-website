@@ -1,0 +1,9 @@
+export {default as CertificateSection} from "./CertificateSection";
+export {default as ConsultationBox} from "./ConsultationBox";
+export {default as CourseOverview} from "./CourseOverview";
+export {default as CourseProgressStep} from "./CourseProgressStep";
+export {default as DesktopCourseIntro} from "./DesktopCourseIntro";
+export {default as ExecutionSteps} from "./ExecutionSteps";
+export {default as FaqSection} from "./FaqSection";
+export {default as ImageSection} from "./ImageSection";
+export {default as StickyFooter} from "./StickyFooter";
