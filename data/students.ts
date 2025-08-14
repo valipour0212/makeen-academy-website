@@ -7,7 +7,7 @@ export const STUDENTS: Student[] = [
         fullName: "محمدرضا اسدپور",
         jobTitle: "Product designer in Tapsi",
         description: "یک فرانت اند دولوپر که همیشه در طول سال‌های تحصیلش جای خالی «تجربه کاری» رو حس می‌کرد. از ترم آخر وارد کالج شد و خودش می‌گه دستاورد اصلیش، یاد گرفتن کار تیمی بود. ملیکا سابقه کار تو شرکت‌های ",
-        voice: "/students/Alireza Ghorbani - Roozhaye Bigharari (320).mp3",
+        voice: "/Alireza Ghorbani - Roozhaye Bi Gharar [128].mp3",
         companyLogo: "/icon/students/company-logo-1.png",
         course: "دوره 18",
         onSelect: true
@@ -18,7 +18,7 @@ export const STUDENTS: Student[] = [
         fullName: "محمدجواد نعیمی",
         jobTitle: "backend developer in Crous",
         description: "یک فرانت اند دولوپر که همیشه در طول سال‌های تحصیلش جای خالی «تجربه کاری» رو حس می‌کرد. از ترم آخر وارد کالج شد و خودش می‌گه دستاورد اصلیش، یاد گرفتن کار تیمی بود. ملیکا سابقه کار تو شرکت‌های ",
-        voice: "/students/MohammadReza Shajaryan - Sepide (320).mp3",
+        voice: "/Alireza Ghorbani - Roozhaye Bi Gharar [128].mp3",
         companyLogo: "/icon/students/company-logo-1.png",
         course: "دوره 18",
         onSelect: false
@@ -29,7 +29,7 @@ export const STUDENTS: Student[] = [
         fullName: "محمدرضا اسدپور",
         jobTitle: "Product designer in Tapsi",
         description: "یک فرانت اند دولوپر که همیشه در طول سال‌های تحصیلش جای خالی «تجربه کاری» رو حس می‌کرد. از ترم آخر وارد کالج شد و خودش می‌گه دستاورد اصلیش، یاد گرفتن کار تیمی بود. ملیکا سابقه کار تو شرکت‌های ",
-        voice: "/students/Alireza Ghorbani - Roozhaye Bigharari (320).mp3",
+        voice: "/Alireza Ghorbani - Roozhaye Bi Gharar [128].mp3",
         companyLogo: "/icon/students/company-logo-1.png",
         course: "دوره 18",
         onSelect: false
@@ -40,7 +40,7 @@ export const STUDENTS: Student[] = [
         fullName: "محمدرضا اسدپور",
         jobTitle: "Product designer in Tapsi",
         description: "یک فرانت اند دولوپر که همیشه در طول سال‌های تحصیلش جای خالی «تجربه کاری» رو حس می‌کرد. از ترم آخر وارد کالج شد و خودش می‌گه دستاورد اصلیش، یاد گرفتن کار تیمی بود. ملیکا سابقه کار تو شرکت‌های ",
-        voice: "/students/Alireza Ghorbani - Roozhaye Bigharari (320).mp3",
+        voice: "/Alireza Ghorbani - Roozhaye Bi Gharar [128].mp3",
         companyLogo: "/icon/students/company-logo-1.png",
         course: "دوره 18",
         onSelect: true
@@ -51,7 +51,7 @@ export const STUDENTS: Student[] = [
         fullName: "محمدجواد نعیمی",
         jobTitle: "backend developer in Crous",
         description: "یک فرانت اند دولوپر که همیشه در طول سال‌های تحصیلش جای خالی «تجربه کاری» رو حس می‌کرد. از ترم آخر وارد کالج شد و خودش می‌گه دستاورد اصلیش، یاد گرفتن کار تیمی بود. ملیکا سابقه کار تو شرکت‌های ",
-        voice: "/students/MohammadReza Shajaryan - Sepide (320).mp3",
+        voice: "",
         companyLogo: "/icon/students/company-logo-1.png",
         course: "دوره 18",
         onSelect: false
@@ -62,7 +62,7 @@ export const STUDENTS: Student[] = [
         fullName: "محمدرضا اسدپور",
         jobTitle: "Product designer in Tapsi",
         description: "یک فرانت اند دولوپر که همیشه در طول سال‌های تحصیلش جای خالی «تجربه کاری» رو حس می‌کرد. از ترم آخر وارد کالج شد و خودش می‌گه دستاورد اصلیش، یاد گرفتن کار تیمی بود. ملیکا سابقه کار تو شرکت‌های ",
-        voice: "/students/Alireza Ghorbani - Roozhaye Bigharari (320).mp3",
+        voice: "/Alireza Ghorbani - Roozhaye Bi Gharar [128].mp3",
         companyLogo: "/icon/students/company-logo-1.png",
         course: "دوره 18",
         onSelect: false
@@ -73,7 +73,7 @@ export const STUDENTS: Student[] = [
         fullName: "محمدرضا اسدپور",
         jobTitle: "Product designer in Tapsi",
         description: "یک فرانت اند دولوپر که همیشه در طول سال‌های تحصیلش جای خالی «تجربه کاری» رو حس می‌کرد. از ترم آخر وارد کالج شد و خودش می‌گه دستاورد اصلیش، یاد گرفتن کار تیمی بود. ملیکا سابقه کار تو شرکت‌های ",
-        voice: "/students/Alireza Ghorbani - Roozhaye Bigharari (320).mp3",
+        voice: "/Alireza Ghorbani - Roozhaye Bi Gharar [128].mp3",
         companyLogo: "/icon/students/company-logo-1.png",
         course: "دوره 18",
         onSelect: false

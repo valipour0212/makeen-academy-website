@@ -5,8 +5,8 @@ import {STUDENTS} from "@/data/students";
 import WaveSurfer from "wavesurfer.js";
 import Image from "next/image";
 import {AudioControlButton, AudioWaveform} from "@/components/atoms/Audio";
-import {StudentCard} from "@/components/molecules";
 import {Heading} from "@/components/atoms/Typography";
+import StudentCard from "@/components/molecules/Students/StudentCard";
 
 function StudentsSection() {
     const [selectID, setSelectID] = useState(STUDENTS[0].id);
