@@ -7,7 +7,8 @@ export interface Student {
     voice: string;
     companyLogo: string;
     course: string;
-    onSelect: boolean;
+    onSelect?: boolean;
+    onClick?: () => void;
 }
 
 export interface StudentCardType {
@@ -18,13 +19,4 @@ export interface StudentCardType {
     course: string;
     onSelect?: boolean;
     onClick?: () => void;
-}
-
-export interface StudentPageAccordionType {
-    image: string;
-    fullName: string;
-    companyLogo: string;
-    jobTitle: string;
-    description: string;
-    voice: string;
 }
